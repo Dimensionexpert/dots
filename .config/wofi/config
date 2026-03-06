@@ -1,0 +1,10 @@
+gtk-dark=s true
+font=Jetbrains Mono 13
+width=600
+height=400
+location=center
+show=drun
+allow_images=true
+insensitive=true        # case-insensitive search
+prompt=
+term=kitty               # your terminal (change if needed)
