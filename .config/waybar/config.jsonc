@@ -1,0 +1,69 @@
+{
+    "height": 30,
+    "spacing": 4,
+    "margin-top": 2,
+    "margin-bottom": 1,
+    "margin-left": 2,
+    "margin-right": 2,
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/wallpaper"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "backlight",
+        "network",
+        "battery",
+        "tray",
+        "custom/power"
+    ],
+    "backlight": {
+        "device": "amdgpu_bl2",
+        "format": "{percent}% {icon}",
+        "format-icons": ["󰃞", "󰃟", "󰃠"]
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰂂", "󰁹"]
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{id}",
+        "persistent-workspaces": {
+            "*": 3
+        }
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "󰥔 {:%H:%M}",
+        "format-alt": "󰃭 {:%Y-%m-%d}"
+    },
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) 󰤨 ",
+        "format-ethernet": "󰈀 {ipaddr}/{cidr}",
+        "format-disconnected": "󰤭 Disconnected"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-muted": "󰝟 Muted",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/power": {
+        "format": "󰐥",
+        "tooltip": false,
+        "on-click": "hyprctl dispatch exit"
+    },
+   "custom/wallpaper": {
+    "format": "󰉼",
+    "on-click": "fish -c wp"
+}
+}
