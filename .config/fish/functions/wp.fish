@@ -13,7 +13,7 @@ function wp
     end
 
     set names (string replace '/home/cypher/Downloads/Wallpaper/' '' $filtered)
-    set selected (string join \n $names | fuzzel --dmenu)
+    set selected (string join \n $names | wofi --dmenu)
 
     swww img /home/cypher/Downloads/Wallpaper/$selected --transition-type $transition_type --transition-duration $transition_duration --transition-fps $transition_fps
 end
