@@ -3,8 +3,9 @@
 
 window {
     background-color: @background;
-    border-radius: 12px;
+    border-radius: 16px;
     border: 1px solid transparent;
+    
 }
 
 
