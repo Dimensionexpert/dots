@@ -1,0 +1,45 @@
+@import "/home/cypher/.config/wofi/colors.css";
+
+window {
+    background-color: @background;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#input {
+    background-color: transparent;
+    color: @text;
+    border: none;
+    border-bottom: 1px solid @active;
+    padding: 8px;
+    margin: 8px;
+}
+
+#outer-box {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#inner-box {
+    margin: 4px;
+}
+
+#entry {
+    background-color: transparent;
+    color: @text;
+    border-radius: 8px;
+    padding: 4px 8px;
+}
+
+#entry:selected {
+    background-color: @active;
+    color: @active_text;
+    border-radius: 8px;
+}
+
+tooltip {
+    background-color: @background;
+    color: @text;
+    border-radius: 8px;
+    border: 1px solid @active;
+}

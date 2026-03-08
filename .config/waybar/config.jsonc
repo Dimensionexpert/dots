@@ -17,6 +17,7 @@
         "pulseaudio",
         "backlight",
         "network",
+        "bluetooth",
         "battery",
         "tray",
         "custom/power"
@@ -40,7 +41,7 @@
         }
     },
     "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
         "format": "󰥔 {:%H:%M}",
         "format-alt": "󰃭 {:%Y-%m-%d}"
     },
@@ -65,5 +66,12 @@
    "custom/wallpaper": {
     "format": "󰉼",
     "on-click": "fish -c wp"
-}
+    },
+    "bluetooth": {
+    "format": "󰂯",
+    "format-connected": "󰂱 {device_alias}",
+    "format-disabled": "󰂲",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "on-click": "blueman-manager"
+    }
 }

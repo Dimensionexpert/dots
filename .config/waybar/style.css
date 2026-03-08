@@ -1,28 +1,30 @@
+@import "colors.css";
+
 * {
     font-family: "JetBrainsMono Nerd Font", monospace;
     font-size: 13px;
 }
 
 window#waybar {
-    background-color: rgba(15, 20, 40, 0.85);
+    background-color: alpha(@background, 0.85);
     border-radius: 12px;
-    
 }
 
 #clock,
 #network,
 #battery,
 #backlight,
+#bluetooth,
 #pulseaudio {
-    background-color: rgba(30, 50, 90, 0.8);
+    background-color: alpha(@surface, 0.8);
     border-radius: 12px;
-    padding:2px 10px;
-    color: #a8c8ff;
+    padding: 2px 10px;
+    color: @text;
     margin: 4px 4px;
 }
 
 #workspaces {
-    background-color: rgba(30, 50, 90, 0.8);
+    background-color: alpha(@surface, 0.8);
     border-radius: 12px;
     padding: 2px 4px;
     margin: 4px 4px;
@@ -31,29 +33,29 @@ window#waybar {
 #workspaces button {
     border-radius: 12px;
     padding: 1px 6px;
-    color: #4a6fa5;
+    color: @muted;
     background-color: transparent;
 }
 
 #workspaces button.active {
-    background-color: rgba(80, 120, 200, 0.5);
-    color: #a8c8ff;
+    background-color: alpha(@active, 0.5);
+    color: @text;
     border-radius: 12px;
 }
 
 #custom-power {
-    background-color: rgba(30, 50, 90, 0.8);
+    background-color: alpha(@surface, 0.8);
     border-radius: 12px;
     padding: 1px 10px;
-    color: #a8c8ff;
+    color: @text;
     margin: 4px 4px;
-    font-size: 16;
+    font-size: 16px;
 }
 
-#custom-wallpaper{
-    background-color: rgba(30, 50, 90, 0.8);
+#custom-wallpaper {
+    background-color: alpha(@surface, 0.8);
     border-radius: 12px;
     padding: 1px 10px;
     margin: 4px 4px;
-    color: #a8c8ff;
+    color: @text;
 }

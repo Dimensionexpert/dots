@@ -1,0 +1,5 @@
+@define-color background {{colors.background.default.hex}};
+@define-color surface    {{colors.surface_container.default.hex}};
+@define-color text       {{colors.primary.default.hex}};
+@define-color muted      {{colors.primary_container.default.hex}};
+@define-color active     {{colors.primary.default.hex}};
