@@ -16,6 +16,6 @@ function wp
     matugen image /home/cypher/Downloads/Wallpaper/$selected
     ~/.config/rofi/generate-wifi-theme.sh  
     killall -SIGUSR2 waybar
-    kill -SIGUSR1 (pgrep kitty)
+    pkill -USR1 -f kitty
 
 end
