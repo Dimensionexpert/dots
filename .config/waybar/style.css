@@ -8,6 +8,7 @@
 window#waybar {
     background-color: alpha(@background, 0.85);
     border-radius: 12px;
+
 }
 
 #clock,
@@ -21,14 +22,18 @@ window#waybar {
     padding: 2px 10px;
     color: @text;
     margin: 4px 4px;
+
 }
 
-#workspaces {
+#workspaces button{
     background-color: alpha(@surface, 0.8);
     border-radius: 12px;
     padding: 2px 4px;
     margin: 4px 4px;
+    transition : all 100ms ease-in-out;
 }
+
+
 
 #workspaces button {
     border-radius: 12px;

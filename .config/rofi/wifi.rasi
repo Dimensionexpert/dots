@@ -1,0 +1,60 @@
+* {
+    background-col:     #19120c;
+    surface-col:        #261e18;
+    text-col:           #feb876;
+    muted-col:          #6a3b02;
+    active-col:         #feb876;
+
+    background-color:   transparent;
+    text-color:         @text-col;
+    font:               "JetBrainsMono Nerd Font 13";
+}
+
+window {
+    background-color:   @background-col;
+    border-color:       @muted-col;
+    border-width:       1px;
+    border-radius:      12px;
+    width:              380px;
+    padding:            8px;
+}
+
+inputbar {
+    background-color:   @surface-col;
+    border-radius:      8px;
+    padding:            8px 12px;
+    margin:             0 0 8px 0;
+    children:           [prompt, entry];
+}
+
+prompt {
+    color:              @active-col;
+    margin:             0 8px 0 0;
+}
+
+entry {
+    color:              @text-col;
+    placeholder:        "Type to filter...";
+    placeholder-color:  @muted-col;
+}
+
+listview {
+    background-color:   transparent;
+    lines:              6;
+    scrollbar:          false;
+}
+
+element {
+    background-color:   transparent;
+    border-radius:      8px;
+    padding:            8px 12px;
+}
+
+element selected {
+    background-color:   @muted-col;
+    text-color:         @active-col;
+}
+
+element-text {
+    color:              inherit;
+}
