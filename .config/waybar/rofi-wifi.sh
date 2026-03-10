@@ -19,7 +19,7 @@ list=$(nmcli -t -f SSID,SECURITY,SIGNAL,IN-USE device wifi list --rescan no \
     }')
 
 refresh="󰑐 Refresh|REFRESH|"
-chosen=$(echo -e "$refresh\n$list" | rofi -dmenu -p "  WiFi" -theme ~/.config/rofi/wifi.rasi)
+chosen=$(echo -e "$refresh\n$list" | rofi -dmenu -p "  WiFi" -theme ~/.config/rofi/theme.rasi)
 
 [[ -z "$chosen" ]] && exit 0
 [[ "$chosen" == "󰑐 Refresh|REFRESH|" ]] && exec "$0" --refresh
@@ -38,7 +38,7 @@ else
     if [[ -n "$saved" ]]; then
         nmcli device wifi connect "$ssid"
         if [[ $? -ne 0 ]]; then
-            password=$(echo "" | rofi -dmenu -p "  Wrong password" -password -theme ~/.config/rofi/wifi.rasi)
+            password=$(echo "" | rofi -dmenu -p "  Wrong password" -password -theme ~/.config/rofi/theme.rasi)
             nmcli connection delete "$ssid"
             nmcli device wifi connect "$ssid" password "$password"
             notify-send "Network" "Connected to $ssid"
@@ -46,7 +46,7 @@ else
             notify-send "Network" "Connected to $ssid"
         fi
     else
-        password=$(echo "" | rofi -dmenu -p "  Password" -password -theme ~/.config/rofi/wifi.rasi)
+        password=$(echo "" | rofi -dmenu -p "  Password" -password -theme ~/.config/rofi/theme.rasi)
         nmcli device wifi connect "$ssid" password "$password"
         notify-send "Network" "Connected to $ssid"
     fi

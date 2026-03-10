@@ -6,7 +6,7 @@ text=$(grep " text" ~/.config/waybar/colors.css | awk '{print $3}' | tr -d ';')
 muted=$(grep "muted" ~/.config/waybar/colors.css | awk '{print $3}' | tr -d ';')
 active=$(grep "active" ~/.config/waybar/colors.css | awk '{print $3}' | tr -d ';')
 
-cat > ~/.config/rofi/wifi.rasi << EOF
+cat > ~/.config/rofi/theme.rasi << EOF
 * {
     background-col:     $background;
     surface-col:        $surface;
