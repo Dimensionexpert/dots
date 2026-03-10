@@ -5,7 +5,7 @@ function wp
 
     set wallpapers (find ~/Downloads/Wallpaper -type f \( -name "*.jpg" -o -name "*.png" \))
     set names (string replace '/home/cypher/Downloads/Wallpaper/' '' $wallpapers)
-    set selected (string join \n $names | rofi --dmenu)
+    set selected (string join \n $names | rofi -dmenu -p "  Wallpaper" -theme ~/.config/rofi/theme.rasi)
     echo /home/cypher/Downloads/Wallpaper/$selected > ~/.local/share/wallpaper-last
 
     swww img /home/cypher/Downloads/Wallpaper/$selected \
