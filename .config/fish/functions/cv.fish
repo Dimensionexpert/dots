@@ -1,3 +1,3 @@
 function cv
-    bash cv.sh $argv
+    bash ~/scripts/cv.sh $argv
 end
