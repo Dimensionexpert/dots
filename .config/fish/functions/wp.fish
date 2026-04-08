@@ -8,7 +8,7 @@ function wp
     set selected (string join \n $names | rofi -dmenu -p "  Wallpaper" -theme ~/.config/rofi/theme.rasi)
     echo /home/cypher/Downloads/Wallpaper/$selected > ~/.local/share/wallpaper-last
 
-    swww img /home/cypher/Downloads/Wallpaper/$selected \
+    awww img /home/cypher/Downloads/Wallpaper/$selected \
         --transition-type $transition_type \
         --transition-duration $transition_duration \
         --transition-fps $transition_fps

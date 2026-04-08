@@ -7,6 +7,8 @@
     "margin-right": 2,
     
 
+    
+
     "modules-left": [
         "hyprland/workspaces",
         "custom/wallpaper"
@@ -19,19 +21,22 @@
         "backlight",
         "network",
         "bluetooth",
-        "battery",
-        "tray",
-        "custom/power"
+        "battery"
+        
     ],
     "backlight": {
         "device": "amdgpu_bl2",
         "format": "{percent}% {icon}",
         "format-icons": ["󰃞", "󰃟", "󰃠"]
     },
+    
     "battery": {
-        "format": "{capacity}% {icon}",
-        "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰂂", "󰁹"]
+    "format": "{capacity}% {icon}",
+    "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰂂", "󰁹"],
+    "warning": 30,
+    "critical": 15
     },
+
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
